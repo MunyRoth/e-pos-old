@@ -1,0 +1,778 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap");
+
+
+:root {
+  --khFont: "Khmer", cursive;
+  --khsubFont: "Noto Sans Khmer", sans-serif;
+}
+/* banner custom style */
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.banner .banner-container {
+  align-items: center;
+  display: flex;
+  margin: 1vw 0.5vw 1vw 1vw;
+  width: 50%;
+  background-color: aliceblue;
+}
+
+.banner .banner-container img {
+  max-width: 100%;
+  object-fit: cover;
+  text-align: center;
+  margin: auto;
+  padding: 1vw;
+}
+.background-blur #logoMOEYS {
+  width: 10%;
+  right: 0;
+  top: 0;
+  padding-right: 0.6rem;
+  position: absolute;
+}
+.background-blur {
+  background: #009879;
+  /* border-radius: 1vw; */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1vw 1vw 1vw 0.5vw;
+  padding: 1vw;
+  position: relative;
+  text-align: center;
+  width: 50%;
+}
+.background-blur .logo {
+  margin: auto;
+  line-height: 3vw;
+}
+.background-blur .logo img {
+  width: 30%;
+}
+.background-blur .logo p {
+  font-size: 2vw;
+  font-family: var(--khsubFont);
+}
+/* .overview */
+
+.overview {
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  padding-top: 2vw;
+  padding-bottom: 3vw;
+  background-color: rgba(255, 255, 255, 0.984);
+}
+.overview .description {
+  display: flex;
+  line-height: 1.5rem;
+  flex-direction: column;
+  height: fit-content;
+  margin: 0 2vw;
+}
+.overview .description .title {
+  width: fit-content;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: var(--khsubFont);
+  line-height: 2rem;
+  border-bottom: 3px solid black;
+}
+.overview .description p {
+  font-size: 1rem;
+  padding-top: 1.2rem;
+  line-height: 1.7rem;
+  width: 100%;
+  font-family: var(--khsubFont);
+}
+
+/* style programs */
+.program {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar-menu {
+  /* position: static; */
+  width: 15vw;
+  background-color: rgb(0, 0, 0);
+}
+.nav {
+  position: relative;
+  margin-right: 5%;
+  top: 40%;
+  margin: 5%;
+  transform: translateY(-40%);
+  font-weight: bold;
+}
+.nav ul {
+  list-style: none;
+  padding: 0.5vw 0.5vw;
+}
+.nav ul li {
+  cursor: pointer;
+  position: relative;
+  margin: 3.2em 0;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.45);
+  display: block;
+  padding: 10px 0;
+  transition: all ease-out 300ms;
+  font-size: 17px;
+}
+
+.nav ul li.active {
+  color: white;
+}
+
+.nav ul li:not(.active)::after {
+  opacity: 0.5;
+}
+
+.nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.3em;
+  background: black;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #5e42a6, #b74e91);
+}
+.nav ul li:not(.active):hover {
+  color: rgb(255, 255, 255);
+  left: 0;
+  bottom: 0;
+  top: 0;
+  padding: 10px 10px;
+  background-image: linear-gradient(to right, #5e42a6, #b74e91);
+}
+
+/* start */
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: #6e93f7;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 3, 3);
+}
+
+/* Style departments */
+.center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  height: 85vh;
+  padding: 2%;
+  justify-content: center;
+  background: #312450;
+}
+.content-container {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 1%;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  /* scroll-padding: 30px; */
+  /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); */
+  padding-bottom: 1%;
+}
+.content-container .card {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(60vh, 1fr));
+  border-radius: 0.5rem;
+  scroll-snap-align: start;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.content-container .card .detail {
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.content-container .card .detail h1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 10%;
+  font-size: 1.2rem;
+  background: #729996;
+  font-family: var(--khsubFont);
+  text-align: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1%;
+  margin: 0;
+}
+.content-container .card .detail ul {
+  padding-left: 1.7rem;
+}
+
+.content-container .card .detail ul li {
+  cursor: pointer;
+  font-family: var(--khsubFont);
+  font-size: 1rem;
+  line-height: 2.2rem;
+}
+.content-container .card .detail ul li:hover{
+  border-radius: .5rem;
+  padding: 0 .3rem;
+  width: fit-content;
+  background-color: black;
+  color: white;
+
+}
+
+/* style curriculum */
+.content-container-cur {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 1%;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  padding-bottom: 1%;
+}
+.content-container-cur .card-cur {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr));
+  border-radius: 0.5rem;
+  scroll-snap-align: start;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  background-color: #312450;
+}
+.content-container-cur .card-cur .detail-cur {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.content-container-cur .card-cur .detail-cur h1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 10%;
+  font-size: 1.2rem;
+  background: #729996;
+  font-family: var(--khsubFont);
+  text-align: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1%;
+  margin: 0;
+}
+.detail-cur .name-fee {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+.detail-cur .name-fee p {
+  padding: 0.5rem 0;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 50%;
+  text-align: center;
+  border-bottom: 0.1rem solid black;
+}
+
+.content-container-cur .card-cur .detail-cur .container-sermester {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content-container-cur .card-cur .detail-cur h2 {
+  width: 80%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin: auto;
+  padding: 0.5rem 0;
+}
+
+.content-container-cur .card-cur .detail-cur .container-sermester h2 {
+  font-size: 1.1rem;
+  border-bottom: 0.1rem solid black;
+}
+.sermester-one,
+.sermester-two {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+.sermester-one .subject,
+.sermester-two .subject {
+  height: 90%;
+}
+.sermester-one .subject h3,
+.sermester-two .subject h3 {
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3rem 0.2rem;
+  border-bottom: 0.13rem solid black;
+  font-weight: 500;
+}
+.sermester-one .subject {
+  border-right: 0.1rem solid black;
+}
+.content-container-cur .card-cur .detail-cur ul {
+  width: 100%;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+/* end Currilum*/
+
+/* tuition Fee */
+.center-tuition-fee {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100vh;
+  justify-content: center;
+  background: #312450;
+}
+
+.wrapper-tuition-fee {
+  padding: 5px 15px;
+  display: flex;
+  grid-gap: 1em;
+  overflow: hidden;
+  height: 90vh;
+  width: 75rem;
+}
+.wrapper-tuition-fee > .inner-tuition-fee {
+  display: flex;
+  gap: 0.5rem;
+  height: 100%;
+  transition: all 1s ease-in-out;
+}
+.card-tuition-fee {
+  cursor: pointer;
+  width: 75vw;
+  height: 88vh;
+  border-radius: 0.2em;
+  background-color: rgba(255, 255, 255, 0.938);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.card-tuition-fee .title-tuition-fee {
+  text-align: center;
+  padding: 10px 15px;
+}
+.card-tuition-fee .title {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.styled-table {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  align-items: center;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+/* tuition Fee */
+
+/* address style*/
+.wrapper-location {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.wrapper-location .contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 40%;
+  align-items: center;
+  margin: auto;
+}
+
+.phone-number,
+.email-container,
+.website-link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+}
+.contact .phone-number p,
+.email-container p,
+.website-link p {
+  font-family: sans-serif;
+  justify-content: center;
+  margin: auto;
+  font-size: 1.2rem;
+}
+.location-container {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center .location-container .location-icon {
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-family: sans-serif;
+  /* font-family: var(--khsubFont)  */
+}
+.center .icon-num,
+.email,
+.website,
+.location-icon {
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-family: sans-serif;
+  font-family: var(--khsubFont);
+  border-bottom: 2px solid black;
+}
+.center .icon-num i,
+.email i,
+.website i,
+.location-icon i {
+  margin: auto;
+}
+
+.website-link p a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.center h1 {
+  font-size: 1.2rem;;
+}
+.address {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  padding: 15px;
+  color: #fff;
+  background-color: black;
+}
+.program {
+  padding-bottom: 50px;
+}
+
+/* size ipad */
+@media only screen and (max-width: 768px) {
+  .program {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-menu {
+    width: 100%;
+    margin: auto;
+    height: 5rem;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+  }
+  .nav {
+    top: 0;
+    font-weight: bold;
+    margin: auto;
+    padding: 0 .2rem;
+  }
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 2rem;
+  }
+  .nav ul li {
+    cursor: pointer;
+    margin: 3.2em 0;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.45);
+    display: block;
+    padding: 10px 0;
+    transition: all ease-out 300ms;
+    font-size: 17px;
+  }
+
+  .nav ul li.active {
+    color: white;
+  }
+
+  .nav ul li:not(.active)::after {
+    opacity: 0.5;
+  }
+
+  .nav ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.3em;
+    background: black;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, #5e42a6, #b74e91);
+  }
+  .nav ul li:not(.active):hover {
+    color: rgb(255, 255, 255);
+    left: 0;
+    bottom: 0;
+    top: 0;
+    padding: 10px 10px;
+    background-image: linear-gradient(to right, #5e42a6, #b74e91);
+  }
+  .center {
+    width: 100%;
+  }
+
+  .content-container {
+    display: flex;
+    gap: 1.2rem;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    /* scroll-padding: 30px; */
+    /* box-shadow: 0 15px 25px rgb(0 0 0 / 10%); */
+    padding-bottom: 1%;
+  }
+
+  .content-container-cur .card-cur {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
+    border-radius: 0.5rem;
+    scroll-snap-align: start;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    background-color: #312450;
+    margin: auto;
+  }
+}
+
+/* size mobile */
+@media only screen and (max-width: 600px) {
+  .overview .description p {
+    font-size: 1rem;
+    padding-top: 1.2rem;
+    line-height: 1.4rem;
+    width: 100%;
+    font-family: var(--khsubFont);
+}
+  
+  /* style departments */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    padding-bottom: 1%;
+  }
+
+  .content-container .card {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(80vh, 1fr));
+    border-radius: 0.5rem;
+    scroll-snap-align: start;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .content-container .card {
+    grid-template-columns: none;
+  }
+
+  .content-container .card .detail {
+    /* gap: 2rem; */
+    width: 90vw;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    margin: auto;
+  }
+
+  
+
+
+  /* style curriculum */
+  .content-container-cur {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    padding-bottom: 1%;
+  }
+  .content-container-cur .card-cur {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(70vh, 1fr));
+    border-radius: 0.5rem;
+    scroll-snap-align: start;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    background-color: #312450;
+  }
+  .content-container-cur .card-cur .detail-cur {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+  }
+
+  .content-container-cur .card-cur .detail-cur h1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+    font-size: 1.2rem;
+    background: #729996;
+    font-family: var(--khsubFont);
+    text-align: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1%;
+    margin: 0;
+  }
+  .detail-cur .name-fee {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-cur .name-fee p {
+    padding: 0.5rem 0;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 80%;
+    text-align: center;
+    border-bottom: 0.1rem solid black;
+  }
+
+  .content-container-cur .card-cur .detail-cur .container-sermester {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .content-container-cur .card-cur .detail-cur h2 {
+    width: 50%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin: auto;
+    padding: 0.5rem 0;
+  }
+
+  .content-container-cur .card-cur .detail-cur .container-sermester h2 {
+    font-size: 1.1rem;
+    border-bottom: 0.1rem solid black;
+  }
+  .sermester-one,
+  .sermester-two {
+    height: 50%;
+    width: 100%;
+    text-align: center;
+  }
+  .sermester-one .subject {
+    border-right: none;
+  }
+  .sermester-one .subject,
+  .sermester-two .subject {
+    width: 100%;
+  }
+  .sermester-one .subject h3,
+  .sermester-two .subject h3 {
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.3rem 0.2rem;
+    border-bottom: 0.13rem solid black;
+    font-weight: 500;
+  }
+  
+  .content-container-cur .card-cur .detail-cur ul {
+    width: 100%;
+    padding: 0 2rem;
+    text-align: left;
+  }
+
+  /* end Currilum*/
+}
