@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar.js";
 import Footer from "./Footer";
+import MoEYS from "../logo/MoEYS.png";
 
 function Detail() {
     // Get params
@@ -71,7 +72,7 @@ function Detail() {
                                     <div className="detail-cur">
                                         <h1>ឆ្នាំទី {index+1}</h1>
                                         <div className="name-fee">
-                                            <p>{university.faculties[4].departments[1].km}</p>
+                                            <p>{university.faculties[facultyId].departments[departmentId].km}</p>
                                             <p>តម្លៃសិក្សា: ${year.fee}</p>
                                         </div>
                                         <div className="container-sermester">
@@ -99,7 +100,7 @@ function Detail() {
                         })}
                     </div>
                 ); else return (
-                    <div>No curriculum</div>
+                    <div className="notyet-data">ទិន្នន័យនឹងធ្វើការដាក់បញ្ចូលនៅពេលក្រោយ</div>
                 );
             } else return (
                 <div>Not yet click department</div>
@@ -154,10 +155,10 @@ function Detail() {
                     {/* <!-- banner --> */}
                     <div className="banner">
                         <div className="banner-container">
-                            <img src={university.images[0]} alt="" />
+                            <img src={university.images[0]} alt="BanneUniversity" />
                         </div>
                         <div className="background-blur">
-                            <img id="logoMOEYS" src="/images/MoEYS.png" alt="" />
+                            <img id="logoMOEYS" src={MoEYS} alt="MoEYS" />
                             <div className="logo">
                                 <img src={university.logo} alt="" />
                                 <p>{university.nameKH}</p>

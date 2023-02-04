@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap");
 
-
 :root {
   --khFont: "Khmer", cursive;
   --khsubFont: "Noto Sans Khmer", sans-serif;
@@ -222,22 +221,34 @@
   margin: 0;
 }
 .content-container .card .detail ul {
-  padding-left: 1.7rem;
+  width: 100%;
+  padding-left: 2rem;
 }
 
 .content-container .card .detail ul li {
   cursor: pointer;
+  width: 100%;
   font-family: var(--khsubFont);
   font-size: 1rem;
-  line-height: 2.2rem;
+  line-height: 2.3rem;
 }
-.content-container .card .detail ul li:hover{
-  border-radius: .5rem;
-  padding: 0 .3rem;
+.content-container .card .detail ul li:hover {
   width: fit-content;
-  background-color: black;
-  color: white;
+  color: rgb(252, 0, 0);
+}
 
+/* style Not data */
+.notyet-data {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+  border-radius: .5rem;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
 
 /* style curriculum */
@@ -502,7 +513,7 @@
 }
 
 .center h1 {
-  font-size: 1.2rem;;
+  font-size: 1.2rem;
 }
 .address {
   padding-top: 2rem;
@@ -510,17 +521,6 @@
   text-align: center;
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  width: 100%;
-  height: fit-content;
-  padding: 15px;
-  color: #fff;
-  background-color: black;
-}
 .program {
   padding-bottom: 50px;
 }
@@ -543,7 +543,7 @@
     top: 0;
     font-weight: bold;
     margin: auto;
-    padding: 0 .2rem;
+    padding: 0 0.2rem;
   }
   .nav ul {
     display: flex;
@@ -622,13 +622,13 @@
 /* size mobile */
 @media only screen and (max-width: 600px) {
   .overview .description p {
-    font-size: 1rem;
+    font-size: 8rem;
     padding-top: 1.2rem;
-    line-height: 1.4rem;
+    line-height: 1.2rem;
     width: 100%;
     font-family: var(--khsubFont);
-}
-  
+  }
+
   /* style departments */
   .content-container {
     display: flex;
@@ -645,7 +645,7 @@
 
   .content-container .card {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(80vh, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(85vh, 1fr));
     border-radius: 0.5rem;
     scroll-snap-align: start;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
@@ -662,9 +662,6 @@
     border-radius: 0.5rem;
     margin: auto;
   }
-
-  
-
 
   /* style curriculum */
   .content-container-cur {
@@ -767,7 +764,7 @@
     border-bottom: 0.13rem solid black;
     font-weight: 500;
   }
-  
+
   .content-container-cur .card-cur .detail-cur ul {
     width: 100%;
     padding: 0 2rem;

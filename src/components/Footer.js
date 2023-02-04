@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div>
-        <div>បង្កើតដោយក្រុមនិស្សិត: វិស្វកម្មព័ត៏មានវិទ្យា</div>
+        <div>រចនាដោយក្រុមនិស្សិត: វិស្វកម្មព័ត៏មានវិទ្យា</div>
         <div>2022 - 2023</div>
       </div>
     </footer>

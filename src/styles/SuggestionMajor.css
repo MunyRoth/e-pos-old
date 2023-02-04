@@ -16,11 +16,7 @@
 }
 
 .page {
-    display: none;
-}
 
-.page1 {
-   display: block;
 }
 
 .subject-radio {
@@ -55,6 +51,7 @@
     color: #777;
     font-size: 0.8em;
     padding: 0.3em 0.8em 0.3em 0.8em;
+    cursor: pointer;
 }
 
 .btn-prev-next-container #prev-btn {

@@ -119,37 +119,39 @@ export default function Universities() {
 
       {/*Button page*/}
       <section className="btn-page-container">
-        <button id="prev-btn" onClick={prevPage}>
-          <i className="fa-solid fa-angles-left"></i>ថយក្រោយ
-        </button>
-        <ul className="btnPage">
-          {Array.from(Array(numberPage), (e, i) => {
-            if (i + 1 === parseInt(currentPage))
-              return (
-                <li className="page-number active">
-                  <button
-                    className="btn"
-                    disab
-                    value={i + 1}
-                    onClick={changePage}
-                  >
-                    {i + 1}
-                  </button>
-                </li>
-              );
-            else
-              return (
-                <li className="page-number">
-                  <button className="btn" value={i + 1} onClick={changePage}>
-                    {i + 1}
-                  </button>
-                </li>
-              );
-          })}
-        </ul>
-        <button id="next-btn" onClick={nextPage}>
-          បន្ទាប់<i className="fa-solid fa-angles-right"></i>
-        </button>
+        <div className="btn-group">
+          <button id="prev-btn" onClick={prevPage}>
+            <i className="fa-solid fa-angles-left"></i>ថយក្រោយ
+          </button>
+          <ul className="btnPage">
+            {Array.from(Array(numberPage), (e, i) => {
+              if (i + 1 === parseInt(currentPage))
+                return (
+                    <li className="page-number active">
+                      <button
+                          className="btn"
+                          disab
+                          value={i + 1}
+                          onClick={changePage}
+                      >
+                        {i + 1}
+                      </button>
+                    </li>
+                );
+              else
+                return (
+                    <li className="page-number">
+                      <button className="btn" value={i + 1} onClick={changePage}>
+                        {i + 1}
+                      </button>
+                    </li>
+                );
+            })}
+          </ul>
+          <button id="next-btn" onClick={nextPage}>
+            បន្ទាប់<i className="fa-solid fa-angles-right"></i>
+          </button>
+        </div>
       </section>
     </React.Fragment>
   );

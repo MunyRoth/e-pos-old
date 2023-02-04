@@ -78,17 +78,17 @@ function NavBar() {
               <a>ទំព័រដើម</a>
             </NavLink>
           </li>
-          <li>
-            <NavLink exact activeClassName="active" to="*">
-              {" "}
-              <a>កម្មវិធីសិក្សា</a>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink exact activeClassName="active" to="*">
-              <a>ជំនាញ</a>
-            </NavLink>
-          </li>
+          {/*<li>*/}
+          {/*  <NavLink exact activeClassName="active" to="*">*/}
+          {/*    {" "}*/}
+          {/*    <a>កម្មវិធីសិក្សា</a>*/}
+          {/*  </NavLink>*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  <NavLink exact activeClassName="active" to="*">*/}
+          {/*    <a>ជំនាញ</a>*/}
+          {/*  </NavLink>*/}
+          {/*</li>*/}
           <li>
             <NavLink exact activeClassName="active" to="/suggestion-major">
               {" "}
