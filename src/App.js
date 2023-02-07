@@ -5,7 +5,7 @@ import "./styles/Home.css";
 import "./styles/SuggestionMajor.css";
 import "./styles/AboutUs.css";
 import "./styles/Detail.css";
-
+// HH
 
 import Home from "./components/Home";
 import SuggestionMajor from "./components/SuggestionMajor";
